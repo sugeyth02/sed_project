@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+.IconTittle {
+  font-size: 1.8vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  margin-top: 22vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginContainer {
+  margin-top: 14vh;
+}
+.singUpContainer {
+  margin-top: 8vh;
+}
+.form {
+  margin-top: 6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.singUpForm {
+  margin-top: 1vh;
+}
+
+.formcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.labelForm {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2vw;
+  font-weight: 400;
+  margin-bottom: 2vh;
+}
+
+.inputForm {
+  width: 18vw;
+  height: 2vw;
+  font-size: 1vw;
+  margin-bottom: 2vh;
+}
+
+#buttonLogIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7vh;
+  width: 16vw;
+  height: 2.7vw;
+  color: #ffce33;
+  font-family: "Roboto", sans-serif;
+  font-size: 1vw;
+  border-radius: 5px;
+  border: 2px solid #ffce33;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+#buttonLogIn:hover {
+  background-color: #f1bc0e;
+  color: white;
+  cursor: pointer;
+}
+
+#buttonSingUp,
+.btn,
+.loginbtn,
+.singUpbtn,
+.registerDaybtn,
+.btnOk,
+.registerGoalbtn,.deactivatebtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
+  width: 16vw;
+  height: 2.7vw;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 1vw;
+  border-radius: 5px;
+  border: 2px solid #ffce33;
+  background-color: #ffce33;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+#buttonSingUp:hover,
+.btn:hover,
+.loginbtn:hover,
+.singUpbtn:hover,
+.registerDaybtn:hover,
+.btnOk:hover,
+.registerGoalbtn:hover, .deactivatebtn:hover {
+  background-color: rgb(255, 255, 255);
+  color: #f1bc0e;
+  border: 2px solid #f1bc0e;
+  cursor: pointer;
+}
+.deactivatebtn{
+  margin-bottom: 1.5vh;
+  width: 10vw;
+  border: 2px solid #FF4773;
+  background-color: #FF4773;
+}
+.deactivatebtn:hover{
+  color: #FF4773;
+  border: 2px solid #FF4773;
+}
+.registerDaybtn, .btnOk, .registerGoalbtn {
+  margin-top: 10vh;
+  margin-right: -50vw;
+  width: 12vw;
+}
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logout {
+  margin-top: 0.3vw;
+  fill: #ffce33;
+}
+.logoutIcon {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1vw;
+  cursor: pointer;
+}
+.navTittle {
+  display: flex;
+  justify-content: flex-start;
+}
+.navTittle h1 {
+  margin-left: 1vw;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8vw;
+  font-weight: 400;
+  margin-bottom: 2vh;
+}
+.menuButtons {
+  margin-top: 4vw;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.userTittle {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.2vw;
+  font-weight: 300;
+}
+.subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.9vw;
+  font-weight: 300;
+  margin-bottom: 2vh;
+}
+.parrafo {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.9vw;
+  font-weight: 400;
+}
+.landingContainer, .createGoalContainer {
+  margin-top: 15vh;
+}
+.metaContainer{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8vw;
+  font-weight: 300;
+  border-radius: 5px;
+  border: 1.5px solid black;
+  padding-left: 0.8vw;
+  margin:7vh 15vw 3vh 15vw;
+}
+.submetaContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2vw;
+  font-weight: 300;
+  margin:0 4vw 0 4vw;
+}
+.userContainer{
+  padding : 0.8vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  border: 1.5px solid black;
+  font-size: 1.2vw;
+  font-weight: 300;
+  margin:5vh 12vw 2vh 12vw;
+}
+

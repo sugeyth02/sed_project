@@ -7,4 +7,13 @@ const GoalModel = new mongoose.Schema({
     "rest" : Number
 })
 
+GoalModel.set("toJSON", {
+    transform : (doc, ret)=>{
+        ret.id = ret._id
+        delete ret._id
+        delete ret.__v
+
+    }
+})
+
 module.exports = mongoose.model("Goal", GoalModel);

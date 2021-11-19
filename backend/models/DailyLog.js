@@ -6,4 +6,13 @@ const DailyLogModel = new mongoose.Schema({
     "saved" : Number
 })
 
+DailyLogModel.set("toJSON", {
+    transform : (doc, ret)=>{
+        ret.id = ret._id
+        delete ret._id
+        delete ret.__v
+
+    }
+})
+
 module.exports = mongoose.model("DailyLog", DailyLogModel);

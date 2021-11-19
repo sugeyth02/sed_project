@@ -18,8 +18,10 @@ export default function Landing(props) {
   return (
     <div>
       <Nav name="Sistema de Ahorros" />
-      <div className = "container landingContainer">
-        <h1 className="userTittle">Bienvenido userx!</h1>
+      <div className="container landingContainer">
+        <h1 className="userTittle">
+          Bienvenido {localStorage.getItem("name")}
+        </h1>
         <div className="menuButtons">
           <div className="btn" onClick={handleRouteRegistarDia}>
             Registrar dia

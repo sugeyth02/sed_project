@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../componets/Logo";
 import { useHistory } from "react-router-dom";
-import axios from "../axios";
+import services from "../services/services";
+import { useUserContext } from "../contexts/UserContext";
 
 export default function SingUp() {
   const history = useHistory();
@@ -10,18 +11,21 @@ export default function SingUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const { logout } = useUserContext();
 
-  const handleOnSubmit = async(e) => {
+  useEffect(() => {
+    logout();
+  }, []);
+
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
-    if(password !== confirmPassword) return //showmessage;
-    try{
-      await axios.post('/auth/singUp', {name,email,password})
+    if (password !== confirmPassword) return; //showmessage;
+    try {
+      await services.singUp(name, email, password);
       history.push("/Login");
-  
-      }catch(e){
-        //hacelo pasmada
-  
-      }
+    } catch (e) {
+      //hacelo pasmada
+    }
   };
   return (
     <div className="container singUpContainer">

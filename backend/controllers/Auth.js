@@ -1,5 +1,5 @@
 const UserRepository = require("../repositories/User");
-const jwt = require("jsonwebtoken");
+const token = require("../utilities/token")
 
 const AuthController = {
   singup: (req, res) => {
@@ -32,10 +32,11 @@ const AuthController = {
       }
       
       res.status(200).json({
-        token: jwt.sign({email: response.email}, process.env.JWT_KEY,{
-            expiresIn : 86400
-        } ),
+        token : token.createToken({email: response.email}, process.env.JWT_KEY),
+        role : response.role,
+        name : response.name
       })
+
     } catch (e) {
       res.status(401).json({
         status: e.message,

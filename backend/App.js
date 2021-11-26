@@ -5,6 +5,7 @@ const http = require("http");
 const express = require("express");
 const authRoute = require("./routes/Auth");
 const userRoute = require("./routes/User");
+const adminRoute = require("./routes/Admin");
 const cors = require("cors");
 
 const app = express();
@@ -29,5 +30,6 @@ server.on("listening", () => {
 
 app.use("/auth", authRoute);
 app.use("/user", userRoute);
+app.use("/admin", adminRoute);
 
 module.exports = { app, server };

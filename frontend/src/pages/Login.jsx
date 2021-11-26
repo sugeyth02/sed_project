@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Logo from "../componets/Logo";
 import { useHistory } from "react-router-dom";
 import { useUserContext } from "../contexts/UserContext";
+import { toast } from "react-toastify";
 
 export default function Login() {
   const history = useHistory();
@@ -18,11 +19,14 @@ export default function Login() {
     e.preventDefault();
     try {
       const role = await login(email, password);
+      if (typeof role === "undefined") {
+        throw new Error("wrong credentials");
+      }
       console.log(role);
       if (role === "user") history.push("/Landing");
       else history.push("/Admin");
     } catch (e) {
-      //hacelo pasmada
+      toast.error(e.message);
     }
   };
   return (

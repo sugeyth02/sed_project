@@ -12,13 +12,12 @@ export default function PrivateRoute({ children, role, ...rest }) {
     }
   }, [token, user]);
 
-  if (isLoading) return <h1>loading...</h1>;
+  if (isLoading) return <h1 className="loading">loading...</h1>;
 
   return (
     <Route
       {...rest}
       render={() => {
-        console.log(token, user.role, user);
         if (token && user.role === role) return children;
         else if (user?.role) {
           return (

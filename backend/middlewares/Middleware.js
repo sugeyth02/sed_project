@@ -2,11 +2,10 @@ const utilityToken = require("../utilities/token");
 const repository = require("../repositories/User");
 
 const Middleware = {
-  //validar token y que sea administrador
+  //validar token
   verifyToken: async (req, res, next) => {
     try {
       const token = req.get("Authorization");
-      console.log(token);
       if (!token || !token.startsWith("Bearer")) {
         return res.status(401).json({
           status: "No autorizado",

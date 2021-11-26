@@ -8,6 +8,10 @@ export default function Nav(props) {
   const history = useHistory();
   const { logout } = useUserContext();
 
+  const handleRouteLanding = () => {
+    history.push("/Landing");
+  };
+
   const handleRoutelogOut = () => {
     logout();
     history.push("/Login");
@@ -15,7 +19,9 @@ export default function Nav(props) {
   return (
     <div className="navContainer">
       <div className="navTittle">
-        <Icon width="3.5vw" />
+        <div onClick={handleRouteLanding}>
+          <Icon width="3.5vw" />
+        </div>
         <h1>{props.name}</h1>
       </div>
       <div className="logoutIcon" onClick={handleRoutelogOut}>

@@ -3,6 +3,7 @@ import Logo from "../componets/Logo";
 import { useHistory } from "react-router-dom";
 import services from "../services/services";
 import { useUserContext } from "../contexts/UserContext";
+import { toast } from "react-toastify";
 
 export default function SingUp() {
   const history = useHistory();
@@ -19,12 +20,19 @@ export default function SingUp() {
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) return; //showmessage;
+    if (password !== confirmPassword) {
+      toast.error("the passwords does not match");
+      return;
+    }
     try {
       await services.singUp(name, email, password);
+      toast.success("user created");
       history.push("/Login");
     } catch (e) {
-      //hacelo pasmada
+      toast.error(
+        e?.response?.data?.status ||
+          "We could not create the user try again later..."
+      );
     }
   };
   return (
